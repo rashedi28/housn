@@ -59,10 +59,10 @@ export default async function HomePage({
       {/* Hero Section - يغطي كامل الشاشة من أعلى الصفحة */}
       <section className="relative min-h-screen flex items-center justify-center px-4 pointer-events-none">
         <Hero3DBackground />
-        {/* تدرجات خفيفة فوق الخلفية ثلاثية الأبعاد */}
-        <div className="absolute inset-0 gradient-beauty opacity-40 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(248,187,208,0.25),transparent_50%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,213,243,0.25),transparent_50%)] pointer-events-none" />
+        {/* تدرجات خفيفة جداً حتى لا تغطي التصميم الثلاثي الأبعاد */}
+        <div className="absolute inset-0 gradient-beauty opacity-15 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(248,187,208,0.12),transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,213,243,0.12),transparent_50%)] pointer-events-none" />
 
         <div className="relative z-10 container mx-auto text-center px-4 pointer-events-auto">
           <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 sm:px-4 py-1.5 sm:py-2 backdrop-blur-sm">

@@ -84,6 +84,19 @@ npm run build
 npm start
 ```
 
+## النشر على Netlify
+
+1. اربط المستودع من GitHub في Netlify واختر المشروع.
+2. **مهم جداً:** اضبط متغيرات البيئة في Netlify حتى تظهر البيانات:
+   - من لوحة الموقع: **Site configuration** → **Environment variables** → **Add a variable** / **Import from .env**.
+   - أضف نفس المتغيرات التي في `.env.local`:
+     - `NEXT_PUBLIC_SUPABASE_URL` = رابط مشروع Supabase (من Supabase → Project Settings → API)
+     - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = المفتاح العام (anon public key) من نفس الصفحة
+3. تأكد أن **Build command** = `npm run build` و **Publish directory** = `.next` (أو اترك الإعداد الافتراضي لـ Next.js إذا كان Netlify يكتشفه تلقائياً).
+4. احفظ ثم **Trigger deploy** أو **Clear cache and deploy site**.
+
+بدون هذه المتغيرات، الموقع يعمل لكن لا يتصل بقاعدة البيانات لذلك لا تظهر المنتجات أو الأقسام.
+
 ## البنية
 
 ```
