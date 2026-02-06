@@ -5,7 +5,7 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { Sparkles, Star, Truck, ArrowLeft } from "lucide-react";
 import { getCategories, getGifts } from "@/lib/supabase/queries";
 import { GiftGrid } from "@/components/gifts/GiftGrid";
-import { Gift } from "@/types";
+import type { Gift, Category } from "@/types";
 import { Hero3DBackground } from "@/components/Hero3DBackground";
 
 export async function generateMetadata() {
@@ -25,8 +25,8 @@ export default async function HomePage({
   const t = await getTranslations();
 
   // جلب جميع الفئات
-  let categories = [];
-  let categoriesWithProducts = [];
+  let categories: Category[] = [];
+  let categoriesWithProducts: { category: Category; products: Gift[] }[] = [];
 
   try {
     categories = await getCategories();

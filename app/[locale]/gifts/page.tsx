@@ -4,6 +4,7 @@ import { GiftGrid } from "@/components/gifts/GiftGrid";
 import { CategoryFilter } from "@/components/gifts/CategoryFilter";
 import { SearchBar } from "@/components/gifts/SearchBar";
 import { Suspense } from "react";
+import type { Gift, Category } from "@/types";
 
 export async function generateMetadata() {
   const t = await getTranslations();
@@ -24,8 +25,8 @@ export default async function GiftsPage({
   const { category, search } = await searchParams;
   const t = await getTranslations();
 
-  let gifts = [];
-  let categories = [];
+  let gifts: Gift[] = [];
+  let categories: Category[] = [];
 
   try {
     [gifts, categories] = await Promise.all([
