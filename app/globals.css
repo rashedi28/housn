@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ألوان ناعمة وباستيل لمتجر التجميل */
+    --background: 0 0% 100%;
+    --foreground: 340 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 15%;
+    --primary: 340 75% 75%; /* وردي ناعم */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 25 85% 85%; /* خوخي */
+    --secondary-foreground: 340 20% 15%;
+    --muted: 340 30% 96%; /* وردي فاتح جداً */
+    --muted-foreground: 340 15% 45%;
+    --accent: 270 60% 85%; /* لافندر */
+    --accent-foreground: 340 20% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 90%;
+    --input: 340 30% 92%;
+    --ring: 340 75% 75%;
+    --radius: 1rem; /* حواف أكثر نعومة */
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 340 10% 95%;
+    --card: 340 20% 10%;
+    --card-foreground: 340 10% 95%;
+    --popover: 340 20% 10%;
+    --popover-foreground: 340 10% 95%;
+    --primary: 340 70% 70%;
+    --primary-foreground: 340 20% 8%;
+    --secondary: 25 60% 20%;
+    --secondary-foreground: 340 10% 95%;
+    --muted: 340 15% 15%;
+    --muted-foreground: 340 10% 70%;
+    --accent: 270 50% 25%;
+    --accent-foreground: 340 10% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 15% 20%;
+    --input: 340 15% 18%;
+    --ring: 340 70% 70%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background: linear-gradient(
+      to bottom right,
+      hsl(340 30% 98%),
+      hsl(25 30% 98%),
+      hsl(270 20% 98%)
+    );
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .dark body {
+    background: linear-gradient(
+      to bottom right,
+      hsl(340 20% 8%),
+      hsl(25 20% 8%),
+      hsl(270 15% 8%)
+    );
+    background-attachment: fixed;
+  }
+}
+
+/* Glassmorphism utilities محسّنة للتجميل */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 187, 208, 0.15),
+    rgba(255, 214, 204, 0.15),
+    rgba(230, 213, 243, 0.15)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(248, 187, 208, 0.1);
+}
+
+.dark .glass {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 187, 208, 0.1),
+    rgba(255, 214, 204, 0.1),
+    rgba(230, 213, 243, 0.1)
+  );
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 
+    0 10px 25px -5px rgba(248, 187, 208, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 187, 208, 0.15),
+    rgba(255, 214, 204, 0.15),
+    rgba(230, 213, 243, 0.15)
+  );
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.glass-nav {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(248, 187, 208, 0.15);
+}
+
+.dark .glass-nav {
+  background: linear-gradient(
+    135deg,
+    rgba(248, 187, 208, 0.2),
+    rgba(255, 214, 204, 0.2),
+    rgba(230, 213, 243, 0.2)
+  );
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* تأثيرات خاصة للتجميل */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(248, 187, 208, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(248, 187, 208, 0.5);
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* تدرجات ناعمة */
+.gradient-pink {
+  background: linear-gradient(135deg, #F8BBD0 0%, #F5A6C0 100%);
+}
+
+.gradient-peach {
+  background: linear-gradient(135deg, #FFD6CC 0%, #FFC4B3 100%);
+}
+
+.gradient-lavender {
+  background: linear-gradient(135deg, #E6D5F3 0%, #D4B5E8 100%);
+}
+
+.gradient-beauty {
+  background: linear-gradient(
+    135deg,
+    #F8BBD0 0%,
+    #FFD6CC 25%,
+    #E6D5F3 50%,
+    #FFC4B3 75%,
+    #D4B5E8 100%
+  );
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Toast animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

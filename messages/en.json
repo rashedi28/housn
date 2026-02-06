@@ -1,0 +1,121 @@
+{
+  "common": {
+    "appName": "Husn",
+    "tagline": "Your beauty starts here",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "noResults": "No results found",
+    "back": "Back",
+    "viewAll": "View All",
+    "new": "New",
+    "bestseller": "Bestseller",
+    "sale": "Special Offer"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "brands": "Brands",
+    "admin": "Admin"
+  },
+  "products": {
+    "title": "Cosmetics",
+    "allProducts": "All Products",
+    "productDetails": "Product Details",
+    "price": "Price",
+    "quantity": "Available Quantity",
+    "rating": "Rating",
+    "category": "Category",
+    "description": "Description",
+    "addToCart": "Add to Cart",
+    "noProducts": "No products available",
+    "skinType": "Skin Type",
+    "usage": "Usage",
+    "ingredients": "Ingredients",
+    "brand": "Brand",
+    "similarProducts": "Similar Products"
+  },
+  "categories": {
+    "title": "Categories",
+    "allCategories": "All Categories",
+    "noCategories": "No categories",
+    "skincare": "Skincare",
+    "makeup": "Makeup",
+    "haircare": "Hair Care",
+    "fragrance": "Fragrance",
+    "bodycare": "Body Care"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "gifts": {
+      "title": "Manage Products",
+      "add": "Add New Product",
+      "edit": "Edit Product",
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "descriptionAr": "Description (Arabic)",
+      "descriptionEn": "Description (English)",
+      "price": "Price",
+      "imageUrl": "Image URL",
+      "category": "Category",
+      "quantity": "Available Quantity",
+      "rating": "Rating",
+      "deleteConfirm": "Are you sure you want to delete this product?"
+    },
+    "products": {
+      "title": "Manage Products",
+      "add": "Add New Product",
+      "edit": "Edit Product",
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "descriptionAr": "Description (Arabic)",
+      "descriptionEn": "Description (English)",
+      "price": "Price",
+      "imageUrl": "Image URL",
+      "category": "Category",
+      "quantity": "Available Quantity",
+      "rating": "Rating",
+      "deleteConfirm": "Are you sure you want to delete this product?"
+    },
+    "categories": {
+      "title": "Manage Categories",
+      "add": "Add New Category",
+      "edit": "Edit Category",
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "descriptionAr": "Description (Arabic)",
+      "descriptionEn": "Description (English)",
+      "icon": "Icon",
+      "color": "Color",
+      "deleteConfirm": "Are you sure you want to delete this category?",
+      "cannotDelete": "Cannot delete this category because it is linked to products"
+    }
+  },
+  "hero": {
+    "title": "Discover Your Natural Beauty",
+    "subtitle": "A carefully curated collection of the finest cosmetics and care products",
+    "cta": "Shop Now",
+    "features": {
+      "title": "Why Husn?",
+      "quality": "High Quality",
+      "qualityDesc": "Carefully selected products",
+      "delivery": "Fast Delivery",
+      "deliveryDesc": "Delivery across the Kingdom",
+      "support": "Customer Support",
+      "supportDesc": "Our team is ready to help you"
+    }
+  }
+}
